@@ -35,3 +35,6 @@ export type { PriceProps } from './Price.js';
 
 export { NavLink } from './NavLink.js';
 export type { NavLinkProps } from './NavLink.js';
+
+export { Show } from './Show.js';
+export type { ShowProps } from './Show.js';
