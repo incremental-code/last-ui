@@ -27,6 +27,8 @@ export { Card } from './Card.js';
 export type { CardProps } from './Card.js';
 export { Badge } from './Badge.js';
 export type { BadgeProps, BadgeVariant } from './Badge.js';
+export { Alert } from './Alert.js';
+export type { AlertProps, AlertVariant } from './Alert.js';
 export { Price } from './Price.js';
 export type { PriceProps } from './Price.js';
 export { NavLink } from './NavLink.js';
