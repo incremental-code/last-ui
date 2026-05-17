@@ -1,0 +1,33 @@
+{
+  "name": "@incremental-code/last-ui",
+  "version": "1.0.0",
+  "description": "A small TypeScript component library for the last-act / last-router stack.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./tokens": {
+      "types": "./dist/tokens.d.ts",
+      "default": "./dist/tokens.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "readme.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "@incremental-code/last-act": "file:../last-act"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}
