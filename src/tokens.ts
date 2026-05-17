@@ -35,6 +35,12 @@ export const tokens = {
     shadow: {
         card: '0 1px 2px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.04)',
     },
+    breakpoint: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+    },
 } as const;
 
 export type Tokens = typeof tokens;

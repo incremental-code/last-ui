@@ -81,3 +81,28 @@ export type { ToastRootProps } from './Toast.js';
 // Focus management
 export { trapFocus } from './focus-trap.js';
 export type { TrapFocusOptions } from './focus-trap.js';
+
+// Media / responsive
+export { matchMedia } from './media.js';
+
+// Overlays and menus
+export { Modal } from './Modal.js';
+export type { ModalProps } from './Modal.js';
+export { MenuDropdown } from './MenuDropdown.js';
+export type { MenuDropdownProps, MenuItem } from './MenuDropdown.js';
+export { MenuBar } from './MenuBar.js';
+export type { MenuBarProps, MenuBarItem } from './MenuBar.js';
+
+// Composite inputs and layout
+export { Select } from './Select.js';
+export type { SelectProps, SelectOption } from './Select.js';
+export { Accordion } from './Accordion.js';
+export type { AccordionProps, AccordionItem } from './Accordion.js';
+export { Tabs } from './Tabs.js';
+export type { TabsProps, TabItem } from './Tabs.js';
+
+// Data
+export { Table } from './Table.js';
+export type { TableProps, TableColumn, SortState } from './Table.js';
+export { Avatar } from './Avatar.js';
+export type { AvatarProps } from './Avatar.js';
