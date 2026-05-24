@@ -1,6 +1,6 @@
 {
   "name": "@incremental-code/last-ui",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A small TypeScript component library for the last-act / last-router stack.",
   "type": "module",
   "main": "./dist/index.js",
@@ -23,8 +23,11 @@
   "scripts": {
     "build": "tsc -p tsconfig.json"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
-    "@incremental-code/last-act": "file:../last-act"
+    "@incremental-code/last-act": "^0.0.1"
   },
   "peerDependencies": {
     "@floating-ui/dom": "^1.6.0"
