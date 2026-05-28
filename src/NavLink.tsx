@@ -13,6 +13,7 @@ export function NavLink({ href, children, active = false }: NavLinkProps) {
     return createElement('a', {
         attributes: {
             href,
+            ...(active ? { 'aria-current': 'page' } : {}),
             style: css({
                 color: active ? tokens.color.accent : tokens.color.text,
                 fontWeight: active ? 600 : 500,
