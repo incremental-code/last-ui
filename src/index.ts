@@ -23,6 +23,8 @@ export type { TextProps } from './Text.js';
 // Buttons / chips / badges
 export { Button } from './Button.js';
 export type { ButtonProps, ButtonVariant } from './Button.js';
+export { ConfirmButton } from './ConfirmButton.js';
+export type { ConfirmButtonProps } from './ConfirmButton.js';
 export { Card } from './Card.js';
 export type { CardProps } from './Card.js';
 export { Badge } from './Badge.js';
