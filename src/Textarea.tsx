@@ -12,6 +12,7 @@ export interface TextareaProps {
     id?: string;
     placeholder?: string;
     rows?: number;
+    attributes?: Record<string, unknown>;
 }
 
 export function Textarea({
@@ -23,11 +24,13 @@ export function Textarea({
     id,
     placeholder,
     rows = 4,
+    attributes: extraAttributes,
 }: TextareaProps) {
     const currentValue = value.get();
     const hasError = !!(error && error.get());
 
     const attributes: Record<string, unknown> = {
+        ...extraAttributes,
         value: currentValue,
         rows,
         style: css({

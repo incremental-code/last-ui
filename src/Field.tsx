@@ -11,13 +11,27 @@ export interface FieldProps {
     error?: ReadSignal<string | null>;
     htmlFor?: string;
     required?: boolean;
+    labelAttributes?: Record<string, unknown>;
+    hintAttributes?: Record<string, unknown>;
+    errorAttributes?: Record<string, unknown>;
     children?: Child;
 }
 
-export function Field({ label, hint, error, htmlFor, required = false, children }: FieldProps) {
+export function Field({
+    label,
+    hint,
+    error,
+    htmlFor,
+    required = false,
+    labelAttributes,
+    hintAttributes,
+    errorAttributes,
+    children,
+}: FieldProps) {
     const labelEl = label !== undefined
         ? createElement('label', {
             attributes: {
+                ...labelAttributes,
                 ...(htmlFor !== undefined ? { for: htmlFor } : {}),
                 style: css({
                     fontFamily: tokens.font.family,
@@ -42,6 +56,7 @@ export function Field({ label, hint, error, htmlFor, required = false, children 
         const fallback = hint !== undefined
             ? createElement('span', {
                 attributes: {
+                    ...hintAttributes,
                     style: css({
                         fontFamily: tokens.font.family,
                         fontSize: tokens.font.sm,
@@ -56,6 +71,7 @@ export function Field({ label, hint, error, htmlFor, required = false, children 
             fallback,
             children: (msg: string) => createElement('span', {
                 attributes: {
+                    ...errorAttributes,
                     style: css({
                         fontFamily: tokens.font.family,
                         fontSize: tokens.font.sm,
@@ -67,6 +83,7 @@ export function Field({ label, hint, error, htmlFor, required = false, children 
     } else if (hint !== undefined) {
         messageEl = createElement('span', {
             attributes: {
+                ...hintAttributes,
                 style: css({
                     fontFamily: tokens.font.family,
                     fontSize: tokens.font.sm,

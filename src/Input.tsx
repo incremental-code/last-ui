@@ -14,6 +14,7 @@ export interface InputProps {
     id?: string;
     placeholder?: string;
     type?: InputType;
+    attributes?: Record<string, unknown>;
 }
 
 export function Input({
@@ -25,11 +26,13 @@ export function Input({
     id,
     placeholder,
     type = 'text',
+    attributes: extraAttributes,
 }: InputProps) {
     const currentValue = value.get();
     const hasError = !!(error && error.get());
 
     const attributes: Record<string, unknown> = {
+        ...extraAttributes,
         type,
         value: currentValue,
         style: css({
