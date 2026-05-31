@@ -28,6 +28,10 @@ export function Field({
     errorAttributes,
     children,
 }: FieldProps) {
+    const normalizedChildren = Array.isArray(children)
+        ? children
+        : (children !== undefined && children !== null ? [children] : []);
+
     const labelEl = label !== undefined
         ? createElement('label', {
             attributes: {
@@ -93,5 +97,5 @@ export function Field({
         }, hint);
     }
 
-    return Stack({ gap: 'xs', children: [labelEl, children, messageEl] });
+    return Stack({ gap: 'xs', children: [labelEl, ...normalizedChildren, messageEl] });
 }
